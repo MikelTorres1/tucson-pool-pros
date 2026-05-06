@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tucson Pool Pros — Weekly Pool Service & Repairs</title>
+<meta name="description" content="Family-owned pool service in Tucson, AZ. Weekly maintenance, equipment repair, monsoon cleanup, and green pool recovery. Free quote in 15 minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tucson Pool Pros",
+  "telephone": "+1-520-555-0100",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tucson",
+    "addressRegion": "AZ",
+    "postalCode": "85716",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Tucson", "Oro Valley", "Marana", "Vail", "Sahuarita", "Catalina Foothills"],
+  "priceRange": "$$",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "07:00",
+    "closes": "18:00"
+  }]
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue-900: #0a1628;
+    --blue-800: #0d2040;
+    --blue-700: #0f3460;
+    --blue-500: #1a6fa8;
+    --blue-400: #2d8fd4;
+    --blue-300: #5baee3;
+    --blue-100: #ddeef9;
+    --blue-50:  #f0f7fd;
+    --orange:   #e8722a;
+    --orange-dark: #c55e1c;
+    --white:    #ffffff;
+    --gray-50:  #f8f9fa;
+    --gray-100: #f1f3f5;
+    --gray-200: #e9ecef;
+    --gray-400: #868e96;
+    --gray-600: #495057;
+    --gray-900: #0f1117;
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--gray-900);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .nav-inner {
+    max-width: 1160px; margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .logo-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: var(--blue-700);
+    display: grid; place-items: center;
+    color: white; font-size: 18px;
+  }
+  .logo-text {
+    font-weight: 800; font-size: 17px;
+    color: var(--blue-900); letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .logo-text span { display: block; font-weight: 500; font-size: 11px; color: var(--gray-400); letter-spacing: 0.04em; text-transform: uppercase; }
+  .nav-cta {
+    background: var(--orange); color: white;
+    padding: 10px 20px; border-radius: 8px;
+    font-weight: 600; font-size: 15px;
+    display: flex; align-items: center; gap: 7px;
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--orange-dark); }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: var(--gray-600); }
+  .nav-links a:hover { color: var(--blue-700); }
+  @media (max-width: 680px) { .nav-links { display: none; } }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--blue-900);
+    padding: 96px 24px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 60% 40%, #0f3460 0%, transparent 70%);
+  }
+  .hero-inner {
+    max-width: 760px; margin: 0 auto;
+    position: relative; text-align: center;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+    color: var(--blue-300); font-size: 13px; font-weight: 600;
+    padding: 5px 14px; border-radius: 100px; margin-bottom: 28px;
+    letter-spacing: 0.02em; text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 60px);
+    font-weight: 900; line-height: 1.08;
+    letter-spacing: -0.03em; color: white;
+    margin-bottom: 22px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--blue-300);
+  }
+  .hero-sub {
+    font-size: 18px; color: rgba(255,255,255,0.6);
+    max-width: 540px; margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+  .hero-ctas {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .btn-hero-primary {
+    background: var(--orange); color: white;
+    padding: 15px 28px; border-radius: 10px;
+    font-weight: 700; font-size: 16px;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .btn-hero-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .btn-hero-secondary {
+    background: rgba(255,255,255,0.1); color: white;
+    padding: 15px 28px; border-radius: 10px;
+    font-weight: 600; font-size: 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: background 0.15s;
+  }
+  .btn-hero-secondary:hover { background: rgba(255,255,255,0.15); }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--blue-800);
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .trust-bar-inner {
+    max-width: 1160px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 40px; height: 60px; flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.55); font-size: 13px; font-weight: 500;
+    white-space: nowrap;
+  }
+  .trust-item strong { color: white; }
+  .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.2); }
+
+  /* ── SECTION WRAPPER ── */
+  .section { padding: 80px 24px; }
+  .section-inner { max-width: 1160px; margin: 0 auto; }
+  .section-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--blue-500);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800; letter-spacing: -0.025em;
+    color: var(--blue-900); line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .section-sub {
+    font-size: 17px; color: var(--gray-600); max-width: 520px; line-height: 1.65;
+  }
+  .section-header { margin-bottom: 48px; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--gray-200);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .service-card {
+    background: white;
+    padding: 32px 28px;
+    transition: background 0.15s;
+  }
+  .service-card:hover { background: var(--blue-50); }
+  .service-num {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+    color: var(--blue-400); margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .service-card h3 {
+    font-size: 17px; font-weight: 700;
+    color: var(--blue-900); margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .service-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+  @media (max-width: 800px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .services-grid { grid-template-columns: 1fr; } }
+
+  /* ── WHY US ── */
+  .why-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 36px;
+  }
+  .why-card { padding: 0; }
+  .why-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: var(--blue-50); border: 1px solid var(--blue-100);
+    display: grid; place-items: center; margin-bottom: 18px;
+    font-size: 22px;
+  }
+  .why-card h3 { font-size: 17px; font-weight: 700; color: var(--blue-900); margin-bottom: 8px; }
+  .why-card p { font-size: 15px; color: var(--gray-600); line-height: 1.65; }
+  @media (max-width: 720px) { .why-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+  /* ── SERVICE AREA ── */
+  .area { background: var(--blue-900); }
+  .area .section-label { color: var(--blue-300); }
+  .area .section-title { color: white; }
+  .area .section-sub { color: rgba(255,255,255,0.55); }
+  .area-chips {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px;
+  }
+  .chip {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.8); font-size: 14px; font-weight: 500;
+    padding: 8px 18px; border-radius: 100px;
+  }
+  .map-block {
+    margin-top: 36px; height: 260px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    display: grid; place-items: center;
+    color: rgba(255,255,255,0.3); font-size: 14px; font-style: italic;
+  }
+
+  /* ── QUOTE FORM ── */
+  .quote-section {
+    background: white;
+    border-top: 1px solid var(--gray-200);
+  }
+  .quote-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+  }
+  .quote-left .section-sub { margin-bottom: 32px; }
+  .proof-list { display: flex; flex-direction: column; gap: 14px; }
+  .proof-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    font-size: 15px; color: var(--gray-600);
+  }
+  .proof-check {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--blue-50); border: 1px solid var(--blue-100);
+    display: grid; place-items: center; flex-shrink: 0;
+    color: var(--blue-500); font-size: 12px; font-weight: 700; margin-top: 1px;
+  }
+  .form-card {
+    background: var(--gray-50); border: 1px solid var(--gray-200);
+    border-radius: 16px; padding: 36px;
+  }
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block; font-size: 13px; font-weight: 600;
+    color: var(--blue-900); margin-bottom: 7px; letter-spacing: -0.01em;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; padding: 11px 14px;
+    border: 1px solid var(--gray-200); border-radius: 9px;
+    font-size: 15px; font-family: inherit;
+    background: white; color: var(--gray-900);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    -webkit-appearance: none; appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--blue-400);
+    box-shadow: 0 0 0 3px rgba(45,143,212,0.12);
+  }
+  .form-group textarea { min-height: 80px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .btn-submit {
+    width: 100%; background: var(--orange); color: white;
+    padding: 14px; border: none; border-radius: 9px;
+    font-size: 16px; font-weight: 700; cursor: pointer;
+    font-family: inherit; letter-spacing: -0.01em;
+    transition: background 0.15s;
+  }
+  .btn-submit:hover { background: var(--orange-dark); }
+  .form-note { font-size: 12px; color: var(--gray-400); text-align: center; margin-top: 12px; }
+  @media (max-width: 800px) {
+    .quote-layout { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--gray-50); border-top: 1px solid var(--gray-200); }
+  .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .testi-card {
+    background: white; border: 1px solid var(--gray-200);
+    border-radius: 14px; padding: 28px;
+  }
+  .stars { color: #f59e0b; font-size: 14px; margin-bottom: 14px; letter-spacing: 1px; }
+  .testi-quote { font-size: 15px; color: var(--gray-600); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+  .testi-author { font-size: 14px; font-weight: 600; color: var(--blue-900); }
+  .testi-loc { font-size: 13px; color: var(--gray-400); font-weight: 400; }
+  @media (max-width: 800px) { .testi-grid { grid-template-columns: 1fr; } }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--blue-900);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 48px 24px;
+  }
+  .footer-inner {
+    max-width: 1160px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 40px; flex-wrap: wrap;
+  }
+  .footer-brand .logo-text { color: white; }
+  .footer-brand .logo-text span { color: rgba(255,255,255,0.35); }
+  .footer-info { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.9; margin-top: 14px; }
+  .footer-info a { color: rgba(255,255,255,0.6); }
+  .footer-info a:hover { color: white; }
+  .footer-copy {
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin-top: 36px; padding-top: 24px;
+    font-size: 12px; color: rgba(255,255,255,0.25);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-icon">💧</div>
+      <div class="logo-text">
+        Tucson Pool Pros
+        <span>Licensed &amp; Insured · Tucson, AZ</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#area">Service Area</a>
+      <a href="#quote">Get a Quote</a>
+    </div>
+    <a class="nav-cta" href="tel:+15205550100">
+      📞 (520) 555-0100
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">⭐ 4.9 · 132 Google Reviews</div>
+    <h1>Your pool, <em>clear all summer.</em><br>We show up every week.</h1>
+    <p class="hero-sub">Family-owned weekly service, repairs, and monsoon cleanup for Tucson, Oro Valley, Marana, and the Foothills. Same tech, every visit.</p>
+    <div class="hero-ctas">
+      <a class="btn-hero-primary" href="#quote">Get a free quote →</a>
+      <a class="btn-hero-secondary" href="tel:+15205550100">📞 Call us now</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">⭐ <strong>4.9/5</strong> on Google</div>
+    <div class="trust-dot"></div>
+    <div class="trust-item">🏠 Family-owned since 2014</div>
+    <div class="trust-dot"></div>
+    <div class="trust-item">🔒 Licensed · Bonded · Insured</div>
+    <div class="trust-dot"></div>
+    <div class="trust-item">📸 Photo report after every visit</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">What we do</div>
+      <h2 class="section-title">Everything your pool needs.<br>Nothing it doesn't.</h2>
+      <p class="section-sub">From weekly chemicals to clearing a swamp after monsoon season — we handle it.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>Weekly Maintenance</h3>
+        <p>Brush, vacuum, skim, chemical balance, equipment check. Same tech every week — you'll know us by name.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>Green Pool Recovery</h3>
+        <p>Tucson summer hits hard. We can clear an algae bloom in 3–5 days, no drain required in most cases.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Equipment Repair</h3>
+        <p>Pumps, filters, heaters, salt cells, automation. Honest diagnosis — we fix what's broken, not what's not.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3>Monsoon Cleanup</h3>
+        <p>One storm fills your pool with palo verde and dust. Same-day debris removal and chemical reset.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <h3>Drain &amp; Acid Wash</h3>
+        <p>For hard-water staining and calcium buildup. Done right once every 3–5 years, not every season.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <h3>Leak Detection</h3>
+        <p>Losing more than half an inch a day? We'll find it. Pressure testing and dye work, no guessing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section" style="background: white; border-top: 1px solid var(--gray-200);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Why us</div>
+      <h2 class="section-title">Three things we hear<br>in almost every review.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🗓</div>
+        <h3>We show up when we say</h3>
+        <p>Same day, same window, every week. If we're going to be late, you'll get a text — not a no-show and an excuse on Monday.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💬</div>
+        <h3>No surprise invoices</h3>
+        <p>Flat monthly rate covers chemicals, labor, and minor parts. You'll never open your phone to a bill you didn't agree to.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📍</div>
+        <h3>Actually local</h3>
+        <p>We live here. We know your neighborhood, your HOA rules, and what a July dust storm does to a cartridge filter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="section area" id="area">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Service area</div>
+      <h2 class="section-title">If you're in Pima County,<br>we probably already drive past your house.</h2>
+      <p class="section-sub">We service most of greater Tucson — call us if you're not sure we cover your neighborhood.</p>
+    </div>
+    <div class="area-chips">
+      <span class="chip">Central Tucson</span>
+      <span class="chip">Catalina Foothills</span>
+      <span class="chip">Oro Valley</span>
+      <span class="chip">Marana</span>
+      <span class="chip">Vail</span>
+      <span class="chip">Sahuarita</span>
+      <span class="chip">Sabino Canyon</span>
+      <span class="chip">Tanque Verde</span>
+      <span class="chip">Rita Ranch</span>
+      <span class="chip">Dove Mountain</span>
+      <span class="chip">SaddleBrooke</span>
+    </div>
+    <div class="map-block">[ Google Maps embed goes here ]</div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section class="section quote-section" id="quote">
+  <div class="section-inner">
+    <div class="quote-layout">
+      <div class="quote-left">
+        <div class="section-label">Free quote</div>
+        <h2 class="section-title">Get your flat<br>monthly rate today.</h2>
+        <p class="section-sub">Tell us about your pool. We'll text or call you back same day with a clear price — no sales pitch, no upsells.</p>
+        <div class="proof-list" style="margin-top: 28px;">
+          <div class="proof-item">
+            <div class="proof-check">✓</div>
+            Response within a few hours (during business hours)
+          </div>
+          <div class="proof-item">
+            <div class="proof-check">✓</div>
+            Flat monthly pricing — chemicals, labor, and minor parts included
+          </div>
+          <div class="proof-item">
+            <div class="proof-check">✓</div>
+            No contracts. Cancel any time.
+          </div>
+          <div class="proof-item">
+            <div class="proof-check">✓</div>
+            Photo report emailed after every single visit
+          </div>
+          <div class="proof-item">
+            <div class="proof-check">✓</div>
+            Prefer to call? <a href="tel:+15205550100" style="color: var(--blue-500); font-weight: 600;">(520) 555-0100</a>
+          </div>
+        </div>
+      </div>
+      <div class="quote-right">
+        <div class="form-card">
+          <form action="https://formspree.io/YOUR_FORM_ID" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(520) 000-0000" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Pool address or zip</label>
+              <input type="text" id="address" name="address" placeholder="85718 or full address">
+            </div>
+            <div class="form-group">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option>Weekly service</option>
+                <option>Green pool recovery</option>
+                <option>Equipment repair</option>
+                <option>One-time cleanup</option>
+                <option>Not sure — please advise</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="notes">Anything else? (optional)</label>
+              <textarea id="notes" name="notes" placeholder="Pool size, current issue, etc."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Get my free quote →</button>
+            <p class="form-note">We respond same day. Your info stays with us.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Reviews</div>
+      <h2 class="section-title">What Tucson homeowners say.</h2>
+      <p class="section-sub">Replace these with screenshots from your Google Business Profile once you're live.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"Switched from a big franchise and the difference is night and day. Same tech every week, water has never looked better. Worth every penny."</p>
+        <div class="testi-author">Sarah K. <span class="testi-loc">· Catalina Foothills</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"Pool turned green after a monsoon and they had it crystal clear in 4 days. Other places quoted me a $1,200 drain. These guys fixed it for $250."</p>
+        <div class="testi-author">Mark R. <span class="testi-loc">· Oro Valley</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"Honest about what needed to be replaced and what didn't. Saved me $800 on a pump my old guy said was dead. I won't use anyone else."</p>
+        <div class="testi-author">Jen P. <span class="testi-loc">· Marana</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-icon">💧</div>
+        <div class="logo-text">
+          Tucson Pool Pros
+          <span>Tucson, AZ</span>
+        </div>
+      </div>
+      <div class="footer-info">
+        <a href="tel:+15205550100">(520) 555-0100</a><br>
+        Mon–Fri 7am–6pm · Sat 8am–2pm<br>
+        ROC# [YOUR LICENSE] · Licensed · Bonded · Insured
+      </div>
+    </div>
+    <div>
+      <div style="font-size:13px; color: rgba(255,255,255,0.4); line-height: 2;">
+        <a href="#services" style="color: rgba(255,255,255,0.5);">Services</a><br>
+        <a href="#area" style="color: rgba(255,255,255,0.5);">Service Area</a><br>
+        <a href="#quote" style="color: rgba(255,255,255,0.5);">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-copy">
+      <span>© 2025 Tucson Pool Pros. All rights reserved.</span>
+      <span>Built by Tono</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
